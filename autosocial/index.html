@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoSocial | Automatize Facebook e Instagram</title>
+    
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- ÍCONES COMO EMOJIS (sem Font Awesome) -->
+    <style>
+        /* Classe base para todos os ícones */
+        .icon {
+            display: inline-block;
+            font-style: normal;
+            margin-right: 8px;
+            font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif;
+        }
+        
+        /* Definição de cada ícone */
+        .icon-rocket::before { content: "🚀"; }
+        .icon-play::before { content: "▶️"; }
+        .icon-login::before { content: "🔑"; }
+        .icon-menu::before { content: "☰"; }
+        .icon-close::before { content: "✕"; }
+        .icon-bolt::before { content: "⚡"; }
+        .icon-shield::before { content: "🛡️"; }
+        .icon-chart::before { content: "📈"; }
+        .icon-chat::before { content: "💬"; }
+        .icon-users::before { content: "👥"; }
+        .icon-star::before { content: "⭐"; }
+        .icon-clock::before { content: "⏰"; }
+        .icon-check::before { content: "✅"; }
+        .icon-send::before { content: "📤"; }
+        .icon-done::before { content: "✓✓"; }
+        .icon-loading::before { content: "🔄"; }
+        .icon-trophy::before { content: "🏆"; }
+        .icon-code::before { content: "💻"; }
+        .icon-magic::before { content: "✨"; }
+        .icon-user::before { content: "👤"; }
+        .icon-link::before { content: "🔗"; }
+        .icon-email::before { content: "📧"; }
+        .icon-home::before { content: "🏠"; }
+        .icon-warning::before { content: "⚠️"; }
+        .icon-fb::before { content: "📘"; }
+        .icon-ig::before { content: "📷"; }
+        .icon-tw::before { content: "🐦"; }
+        .icon-in::before { content: "💼"; }
+        .icon-web::before { content: "🌐"; }
+        .icon-design::before { content: "🎨"; }
+        .icon-js::before { content: "⚡"; }
+        .icon-git::before { content: "🐙"; }
+        .icon-messenger::before { content: "💬"; }
+        .icon-connect::before { content: "🔌"; }
+        .icon-settings::before { content: "⚙️"; }
+        .icon-bot::before { content: "🤖"; }
+        .icon-robot::before { content: "🤖"; }
+        .icon-instagram::before { content: "📱"; }
+        .icon-facebook::before { content: "📘"; }
+        .icon-meta::before { content: "⚡"; }
+        .icon-check-circle::before { content: "✅"; }
+        .icon-project::before { content: "📊"; }
+        .icon-envelope::before { content: "✉️"; }
+        .icon-paint::before { content: "🎨"; }
+        .icon-cogs::before { content: "⚙️"; }
+        .icon-terminal::before { content: ">_"; }
+        .icon-lightbulb::before { content: "💡"; }
+        .icon-comments::before { content: "💬"; }
+        .icon-signin::before { content: "🔐"; }
+    </style>
+    
+    <!-- Fontes do Sistema -->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-weight: 700;
+        }
+    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="icon icon-bot"></span>
+                    <h1>Auto<span>Social</span></h1>
+                </div>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="#features" class="nav-link">Funcionalidades</a>
+                    <a href="#how-it-works" class="nav-link">Como Funciona</a>
+                    <a href="#pricing" class="nav-link">Preços</a>
+                    <a href="#testimonials" class="nav-link">Depoimentos</a>
+                    <a href="#" class="btn-login">
+                        <span class="icon icon-signin"></span> Login
+                    </a>
+                    <a href="#pricing" class="btn-primary btn-small">
+                        Começar Grátis
+                    </a>
+                </div>
+                
+                <button class="menu-toggle" id="menuToggle">
+                    <span class="icon icon-menu"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Automatize Seu Atendimento</span><br>
+                        no <span class="highlight">Facebook</span>, <span class="highlight">Instagram</span> e <span class="highlight">Messenger</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Respostas automáticas 24/7 que convertem mensagens em vendas. 
+                        <span class="text-highlight">Nunca mais perca um cliente por falta de resposta.</span>
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#pricing" class="btn-primary btn-large">
+                            <span class="icon icon-rocket"></span> Começar Gratuitamente
+                        </a>
+                        <a href="#demo" class="btn-secondary btn-large">
+                            <span class="icon icon-play"></span> Ver Demonstração
+                        </a>
+                    </div>
+                    
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <span class="icon icon-bolt"></span>
+                            <span>Configuração em 5 minutos</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon icon-shield"></span>
+                            <span>API Oficial do Facebook</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon icon-chart"></span>
+                            <span>Aumente vendas em 300%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="dashboard-preview">
+                        <div class="dashboard-header">
+                            <div class="platform-tabs">
+                                <span class="tab active"><span class="icon icon-messenger"></span> Messenger</span>
+                                <span class="tab"><span class="icon icon-instagram"></span> Instagram</span>
+                                <span class="tab"><span class="icon icon-facebook"></span> Facebook</span>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-container">
+                            <div class="message incoming">
+                                <div class="avatar">👤</div>
+                                <div class="message-content">
+                                    <p>Olá, esse produto tem em estoque?</p>
+                                    <span class="time">14:30</span>
+                                </div>
+                            </div>
+                            
+                            <div class="message outgoing">
+                                <div class="message-content">
+                                    <p><span class="icon icon-robot"></span> Sim! Temos em estoque. Gostaria de mais informações?</p>
+                                    <span class="time">14:30 <span class="icon icon-done"></span></span>
+                                </div>
+                                <div class="avatar">🤖</div>
+                            </div>
+                            
+                            <div class="message incoming">
+                                <div class="avatar">👤</div>
+                                <div class="message-content">
+                                    <p>Qual o prazo de entrega?</p>
+                                    <span class="time">14:31</span>
+                                </div>
+                            </div>
+                            
+                            <div class="message outgoing typing">
+                                <div class="message-content">
+                                    <div class="typing-indicator">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <p>Bot digitando...</p>
+                                </div>
+                                <div class="avatar">🤖</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-badge">
+                        <span class="icon icon-bolt"></span>
+                        <span>Resposta automática em 2s</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="trusted-by">
+                <p>Usado por mais de 2.000 empresas</p>
+                <div class="logos">
+                    <span>🏪</span>
+                    <span>🛍️</span>
+                    <span>💼</span>
+                    <span>🏢</span>
+                    <span>🏥</span>
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="10000">0</div>
+                    <div class="stat-label">Mensagens/dia</div>
+                    <div class="stat-icon">
+                        <span class="icon icon-chat"></span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number" data-count="2000">0</div>
+                    <div class="stat-label">Clientes Satisfeitos</div>
+                    <div class="stat-icon">
+                        <span class="icon icon-users"></span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number" data-count="99">0</div>
+                    <div class="stat-label">% Satisfação</div>
+                    <div class="stat-icon">
+                        <span class="icon icon-star"></span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label">/7 Atendimento</div>
+                    <div class="stat-icon">
+                        <span class="icon icon-clock"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Preview -->
+    <section class="features-preview" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Atendimento Automático em <span class="gradient-text">Todas as Plataformas</span></h2>
+                <p class="section-subtitle">Integração nativa e segura com as principais redes sociais</p>
+            </div>
+            
+            <div class="platforms">
+                <div class="platform-card instagram">
+                    <div class="platform-icon">
+                        <span class="icon icon-instagram"></span>
+                    </div>
+                    <h3>Instagram Direct</h3>
+                    <ul>
+                        <li><span class="icon icon-check"></span> Respostas automáticas</li>
+                        <li><span class="icon icon-check"></span> Comentários em stories</li>
+                        <li><span class="icon icon-check"></span> Segmentação por hashtag</li>
+                    </ul>
+                    <button class="platform-btn">Saiba mais</button>
+                </div>
+                
+                <div class="platform-card messenger">
+                    <div class="platform-icon">
+                        <span class="icon icon-messenger"></span>
+                    </div>
+                    <h3>Facebook Messenger</h3>
+                    <ul>
+                        <li><span class="icon icon-check"></span> Respostas instantâneas</li>
+                        <li><span class="icon icon-check"></span> Fluxos conversacionais</li>
+                        <li><span class="icon icon-check"></span> Encaminhamento humano</li>
+                    </ul>
+                    <button class="platform-btn">Saiba mais</button>
+                </div>
+                
+                <div class="platform-card facebook">
+                    <div class="platform-icon">
+                        <span class="icon icon-facebook"></span>
+                    </div>
+                    <h3>Páginas Facebook</h3>
+                    <ul>
+                        <li><span class="icon icon-check"></span> Atendimento em páginas</li>
+                        <li><span class="icon icon-check"></span> Moderação de comentários</li>
+                        <li><span class="icon icon-check"></span> Respostas automáticas</li>
+                    </ul>
+                    <button class="platform-btn">Saiba mais</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Como Funciona em <span class="gradient-text">3 Passos Simples</span></h2>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Conecte Suas Contas</h3>
+                    <p>Login seguro com API oficial do Facebook</p>
+                    <div class="step-icon">
+                        <span class="icon icon-connect"></span>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Configure Respostas</h3>
+                    <p>Crie fluxos de conversa personalizados</p>
+                    <div class="step-icon">
+                        <span class="icon icon-settings"></span>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Ative e Relaxe</h3>
+                    <p>Sistema responde automaticamente 24/7</p>
+                    <div class="step-icon">
+                        <span class="icon icon-bot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Planos que <span class="gradient-text">Crescem com Você</span></h2>
+                <p class="section-subtitle">Comece gratuitamente, escale conforme precisa</p>
+            </div>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Grátis</h3>
+                        <div class="price">R$ 0<span>/mês</span></div>
+                    </div>
+                    <ul class="features-list">
+                        <li><span class="icon icon-check"></span> 100 mensagens/mês</li>
+                        <li><span class="icon icon-check"></span> 1 conta conectada</li>
+                        <li><span class="icon icon-check"></span> Respostas básicas</li>
+                        <li><span class="icon icon-close"></span> Suporte prioritário</li>
+                    </ul>
+                    <button class="btn-pricing">Começar Agora</button>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="badge">Mais Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="price">R$ 97<span>/mês</span></div>
+                    </div>
+                    <ul class="features-list">
+                        <li><span class="icon icon-check"></span> 2.000 mensagens/mês</li>
+                        <li><span class="icon icon-check"></span> 3 contas conectadas</li>
+                        <li><span class="icon icon-check"></span> Respostas inteligentes</li>
+                        <li><span class="icon icon-check"></span> Suporte 24/7</li>
+                    </ul>
+                    <button class="btn-pricing btn-popular">Escolher Plano</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Empresarial</h3>
+                        <div class="price">R$ 297<span>/mês</span></div>
+                    </div>
+                    <ul class="features-list">
+                        <li><span class="icon icon-check"></span> Mensagens ilimitadas</li>
+                        <li><span class="icon icon-check"></span> 10+ contas conectadas</li>
+                        <li><span class="icon icon-check"></span> API personalizada</li>
+                        <li><span class="icon icon-check"></span> Gerente dedicado</li>
+                    </ul>
+                    <button class="btn-pricing">Fale Conosco</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Pronto para Transformar Seu Atendimento?</h2>
+                <p>Comece gratuitamente e experimente o poder da automação</p>
+                
+                <div class="cta-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="seu@melhor-email.com" id="emailInput">
+                        <button class="btn-primary" id="ctaButton">
+                            <span class="icon icon-send"></span> Criar Conta Gratuita
+                        </button>
+                    </div>
+                    <p class="form-note">Sem cartão de crédito necessário • 14 dias grátis</p>
+                </div>
+                
+                <div class="security-badges">
+                    <div class="badge">
+                        <span class="icon icon-shield"></span>
+                        <span>Seguro e criptografado</span>
+                    </div>
+                    <div class="badge">
+                        <span class="icon icon-check-circle"></span>
+                        <span>Conformidade LGPD</span>
+                    </div>
+                    <div class="badge">
+                        <span class="icon icon-meta"></span>
+                        <span>API Oficial Facebook</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="icon icon-bot"></span>
+                        <h2>Auto<span>Social</span></h2>
+                    </div>
+                    <p>Automatizando conversas, maximizando resultados.</p>
+                    <div class="social-links">
+                        <a href="#"><span class="icon icon-fb"></span></a>
+                        <a href="#"><span class="icon icon-ig"></span></a>
+                        <a href="#"><span class="icon icon-tw"></span></a>
+                        <a href="#"><span class="icon icon-in"></span></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Produto</h4>
+                        <a href="#features">Funcionalidades</a>
+                        <a href="#pricing">Preços</a>
+                        <a href="#">API</a>
+                        <a href="#">Status</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Empresa</h4>
+                        <a href="#">Sobre</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Carreiras</a>
+                        <a href="#">Contato</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <a href="#">Privacidade</a>
+                        <a href="#">Termos</a>
+                        <a href="#">LGPD</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AutoSocial. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ para empreendedores digitais</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
